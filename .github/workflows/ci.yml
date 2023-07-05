@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
-      - name: Run phpstan
-        uses: actions-x/phpstan@v1
+      - name: Run phpstanx
+        uses: php-actions/phpstan@v3
         with:
           directories: src tests
           level: 3
