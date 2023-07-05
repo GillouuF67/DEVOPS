@@ -1,6 +1,6 @@
 <?php
 
-$couca = "";
-echo $ajfi;
+$couca = "aas";
+echo $couca;
 
 ?>
