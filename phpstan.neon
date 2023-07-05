@@ -11,8 +11,8 @@ parameters:
   #   - src
 
   # Définir les chemins d'exclusion des fichiers spécifiques (facultatif)
-  excludeFiles:
-    - src/Example/UnusedClass.php
+  # excludeFiles:
+  #   - src/Example/UnusedClass.php
 
   # Définir les règles personnalisées ou surcharger les règles existantes (facultatif)
   # rules:
