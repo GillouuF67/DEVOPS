@@ -2,13 +2,13 @@ parameters:
   level: 7  # Niveau de vérification (1-7, 7 étant le plus strict)
 
   # Définir les chemins d'exclusion des dossiers ou fichiers spécifiques (facultatif)
-  excludePaths:
-    - tests
-    - dev
+  # excludePaths:
+  #   - tests
+  #   - dev
 
   # Définir les chemins d'inclusion des dossiers ou fichiers spécifiques (facultatif)
-  # includePaths:
-  #   - src
+  includePaths:
+   - src
 
   # Définir les chemins d'exclusion des fichiers spécifiques (facultatif)
   # excludeFiles:
