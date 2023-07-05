@@ -1,0 +1,37 @@
+parameters:
+  level: 7  # Niveau de vérification (1-7, 7 étant le plus strict)
+
+  # Définir les chemins d'exclusion des dossiers ou fichiers spécifiques (facultatif)
+  excludePaths:
+    - tests
+    - dev
+
+  # Définir les chemins d'inclusion des dossiers ou fichiers spécifiques (facultatif)
+  # includePaths:
+  #   - src
+
+  # Définir les chemins d'exclusion des fichiers spécifiques (facultatif)
+  excludeFiles:
+    - src/Example/UnusedClass.php
+
+  # Définir les règles personnalisées ou surcharger les règles existantes (facultatif)
+  # rules:
+  #   - @PSR12.MethodDeclaration
+
+  # Configurer les extensions (facultatif)
+  # extensions:
+  #   - vendor/phpstan/phpstan-strict-rules/extension.neon
+
+  # Configurer les règles spécifiques (facultatif)
+  # rules:
+  #   # Exemple de règle personnalisée
+  #   App\SomeClass:
+  #     disallowPrivatePropertyInPhpDoc: true
+
+  # Configurer les fichiers bootstrap (facultatif)
+  # bootstrapFiles:
+  #   - bootstrap.php
+
+  # Configurer les fichiers autoload (facultatif)
+  # autoloadFiles:
+  #   - autoload.php
