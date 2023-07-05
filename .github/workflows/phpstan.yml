@@ -1,0 +1,26 @@
+name: PHPStan
+
+on:
+  push:
+    branches:
+      - main # Remplacez par la branche principale de votre référentiel
+
+jobs:
+  phpstan:
+    name: PHPStan Static Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4" # Remplacez par la version PHP souhaitée
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse --level=7 src
