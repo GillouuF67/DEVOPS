@@ -1,16 +1,21 @@
-name: CI
 
 on: [push]
+name: Test
 
 jobs:
-  build-test:
+  phpstan:
+    name: phpstan
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - uses: php-actions/composer@v6 # or alternative dependency management
-    - uses: php-actions/phpstan@v3
-      with:
-        path: src/
-
-    # ... then your own project steps ...
+      - name: Checkout project
+        uses: actions/checkout@v2
+      - name: Run phpstan
+        uses: actions-x/phpstan@v3
+        with:
+          installComposer: 0
+          phpstanVersion: ^0.12
+          level: 5
+          paths: src/
+          configPath: custom-phpstan-config.neon
+          useBundled: 1
+          arguments: --autoload-file my-custom-autoload.php
