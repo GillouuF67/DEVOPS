@@ -1,16 +1,14 @@
-on: [push]
 name: Test
 
+on: [push]
+
 jobs:
-  phpstan:
-    name: phpstan
+  build-test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout project
-        uses: actions/checkout@v2
-      - name: Run phpstanx
-        uses: php-actions/phpstan@v3
-        with:
-          directories: src tests
-          level: 3
-          phpstanVersion: ^0.12
+    - uses: actions/checkout@v3
+    - uses: php-actions/composer@v6 # or alternative dependency management
+    - uses: php-actions/phpstan@v3
+      with:
+        path: src/
