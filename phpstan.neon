@@ -7,8 +7,8 @@ parameters:
   #   - dev
 
   # Définir les chemins d'inclusion des dossiers ou fichiers spécifiques (facultatif)
-  includePaths:
-   - src
+  # includePaths:
+  #  - src
 
   # Définir les chemins d'exclusion des fichiers spécifiques (facultatif)
   # excludeFiles:
