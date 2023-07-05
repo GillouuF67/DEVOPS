@@ -23,4 +23,4 @@ jobs:
         run: composer install
 
       - name: Run PHPStan
-        run: vendor/bin/phpstan analyse --level=7 src\
+        run: vendor/bin/phpstan analyse
