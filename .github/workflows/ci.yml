@@ -9,7 +9,7 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v2
       - name: Run phpstan
-        uses: actions-x/phpstan@v1
+        uses: actions/phpstan@v1
         with:
           directories: src tests
           level: 3
